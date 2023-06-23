@@ -1,0 +1,24 @@
+<div class="container">
+<h1>crear post    . </h1>
+</div>
+
+<div class=" card col-8">
+
+<%= form_with model: @post, method: :post do |form|%>
+<div class=" border p-5 shadow">
+
+    <div class="mb-3">
+        <%= form.label :title, "Titulo del post", class:"form-label"%>
+        <%= form.text_field :title, class:"form-control"%>
+    </div>
+    <div class="mb-5">
+        <%= form.label :content, "Contenido", class:"form-label"%>
+        <%= form.text_area :content, class:"form-control", id:"exampleFormControlTextarea", rows:"3"%>
+    </div>
+    <div>
+        <%= form.submit "Enviar", class:"btn btn-dark"%>
+    </div>
+</div>
+<% end %>
+</div>
+

@@ -1,0 +1,10 @@
+
+<h2>mostrando journalists.all</h2>
+<p> <%=@journalists.count%> </p>
+<%= link_to "NEW journalists.", journalists_new_path, class:'btn btn-dark'%>
+
+<% @journalists.each do |j|%>
+<h2><%=j.name%></h2>
+<p><%= j.lastname%></p>
+<p><%= j.speciality%></p>
+<%end%>
